@@ -13,6 +13,8 @@ get '/dashboard/reports_by_task', to: 'main#reports_by_task', as: 'reports_by_ta
 
 get '/hazards', to: 'hazards#index', as: 'hazards'
 
+get '/impacts', to: 'impacts#index', as: 'impacts'
+
 resources :safety_reports
 
 root 'tasks#index'
