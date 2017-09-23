@@ -15,6 +15,19 @@
     <option value="100" label="100">
   </datalist>
 <br />
+<input list="Tasks" name="task" >
+<datalist id="Tasks">
+    <option value="Volvo">
+    <option value="BMW">
+    <option value="Bugatti">
+    <option value="Cadillac">
+    <option value="Chevrolet">
+    <option value="Chrysler">
+    <option value="Ford">
+    <option value="Mazda">
+</datalist>
+<input type="submit" />
+<br />
 <%= select_tag :hazard, options_for_select(["Electrical", "Fire", "Injury"]) %>
 <br />
 <%= select_tag :control, options_for_select(["Rubber Gloves", "Respirator", "Eye protection"]) %>
