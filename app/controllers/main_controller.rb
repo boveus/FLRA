@@ -8,6 +8,10 @@ class MainController < ApplicationController
 
   end
 
+  def employee_list
+    @employees = Employee.first(5)
+  end
+
   def reports_by_task
     @reports_by_task = reports_by_task_chart
   end

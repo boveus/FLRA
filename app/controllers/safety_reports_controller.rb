@@ -17,4 +17,8 @@ class SafetyReportsController < ApplicationController
     @control = params["control"]
     @severity_value = params["safety_report"]["severity_value"].to_i
   end
+
+  def show
+    @report = SafetyReport.find(params[:id])
+  end
 end
