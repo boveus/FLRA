@@ -1,0 +1,24 @@
+<h2> Safety Report </h2>
+<a> Report by <%= @report.employee.name %> </a>
+<a> Task: <%= @report.task %> </a>
+<ul> Reported Hazards:
+  <% @report.hazards.each do |hazard| %>
+  <li> <%= hazard.name %>
+       <%= image_tag hazard.icon_path, size: '30x30' %>
+  </li>
+</ul>
+<ul> Reported Hazards:
+  <% @report.hazards.each do |hazard| %>
+  <li> <%= hazard.name %>
+       <%= image_tag hazard.icon_path, size: '30x30'%>
+  </li>
+  <ul> Actions taken to prevent hazard:
+    <% hazard.prevention_actions.each do |action| %>
+    <li> <%= action.name %>
+         <%= image_tag action.icon_path, size: '30x30' %>
+    </li>
+    <% end %>
+  </ul>
+</ul>
+<% end %>
+<% end %>

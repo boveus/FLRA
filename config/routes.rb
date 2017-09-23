@@ -6,6 +6,8 @@ get 'tasks/index'
 
 get '/reminder', to: 'main#reminder', as: 'safety_reminder'
 
+get '/dashboard/employees', to: 'main#employee_list', as: 'employee_list'
+
 get '/dashboard', to: 'main#dashboard', as: 'dashboard'
 
 get '/dashboard/time_of_day', to: 'main#time_of_day', as: 'time_of_day'
