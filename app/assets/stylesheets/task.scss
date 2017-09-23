@@ -13,8 +13,12 @@ form {
   margin: auto;
 }
 input {
-  background: url(search-icon.svg) left contain no-repeat #DCEDFF;
+  background: url(search-icon.svg) left / contain no-repeat #DCEDFF;
   font-size: 18px;
   color: #11151C;
   margin: 0 auto;
+  padding: 4px;
+}
+input:focus {
+  background: #fff;
 }
