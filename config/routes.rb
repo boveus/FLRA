@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
 get '/', to: 'main#index', as: 'index'
 
+get '/reminder', to: 'main#reminder', as: 'safety_reminder'
+
+resources :safety_reports
 end
