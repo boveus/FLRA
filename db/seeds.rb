@@ -33,11 +33,12 @@ tasks = ['Cleanup with a shovel',
 2000.times do
   name = Faker::Name.name
   employee = Employee.create(name: name, username: "#{name}123")
-  report = SafetyReport.create(task: tasks.sample, employee: employee, created_at: Faker::Time.between(1.years.ago, Date.today))
-
-  hazard = Hazard.create(name: hazards.sample, icon_path: icons.sample, safety_report: report)
-  pa = PreventionAction.create(name: preventive_actions.sample , icon_path: icons.sample, hazard: hazard)
-  sv = SeverityValue.create(value: rand(1..100), hazard: hazard)
+  rand(10).times do
+    report = SafetyReport.create(task: tasks.sample, employee: employee, created_at: Faker::Time.between(1.years.ago, Date.today))
+    hazard = Hazard.create(name: hazards.sample, icon_path: icons.sample, safety_report: report)
+    pa = PreventionAction.create(name: preventive_actions.sample , icon_path: icons.sample, hazard: hazard)
+    sv = SeverityValue.create(value: rand(1..100), hazard: hazard)
+  end
 end
 
 

@@ -6,7 +6,7 @@
   <li> Safety Task Completed </li>
   <ul>
   <% employee.safety_reports.each do |safety_report| %>
-    <li> <%= link_to "Task number #{employee.safety_reports.length}", safety_report_path(safety_report) %>
+    <li> <%= link_to "Task number #{safety_report.id}", safety_report_path(safety_report) %>
       <button style="font-size:24px">Button <i class="fa fa-thumbs-up"></i></button>
     </li>
     <% end %>
