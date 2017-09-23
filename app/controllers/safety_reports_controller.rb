@@ -10,7 +10,7 @@ class SafetyReportController < ApplicationController
   def new
 
   end
-  
+
   def create
     @safety_report = SafetyReport.new
   end
