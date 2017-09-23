@@ -12,6 +12,9 @@ class SafetyReportsController < ApplicationController
   end
 
   def create
+    @task = params["task"]
+    @hazard = params["hazard"]
+    @control = params["control"]
     @severity_value = params["safety_report"]["severity_value"].to_i
   end
 end
