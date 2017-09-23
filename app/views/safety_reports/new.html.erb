@@ -15,18 +15,14 @@
     <option value="100" label="100">
   </datalist>
 <br />
+<br />
 <input list="Tasks" name="task" >
 <datalist id="Tasks">
-    <option value="Volvo">
-    <option value="BMW">
-    <option value="Bugatti">
-    <option value="Cadillac">
-    <option value="Chevrolet">
-    <option value="Chrysler">
-    <option value="Ford">
-    <option value="Mazda">
+    <option value="Driving a truck">
+    <option value="Lifting">
+    <option value="Jackhammer work">
 </datalist>
-<input type="submit" />
+<br />
 <br />
 <%= select_tag :hazard, options_for_select(["Electrical", "Fire", "Injury"]) %>
 <br />
@@ -34,7 +30,5 @@
 <br />
 <%= f.submit %>
 <% end %>
-
-
 
 </html>
