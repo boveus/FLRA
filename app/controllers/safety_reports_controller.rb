@@ -12,10 +12,13 @@ class SafetyReportsController < ApplicationController
   end
 
   def create
-    @task = params["task"]
-    @hazard = params["hazard"]
-    @control = params["control"]
-    @severity_value = params["safety_report"]["severity_value"].to_i
+    report = Employee.first.safety_reports.create
+    report.task = params["task"]
+    prevention_action = PreventionAction.find_by(name: params["control"])
+    hazard = Hazard.find_by(name: params["hazard"])
+    hazard.prevention_actions << prevention_action
+    report.hazards << hazard
+    redirect_to safety_report_path(report)
   end
 
   def show

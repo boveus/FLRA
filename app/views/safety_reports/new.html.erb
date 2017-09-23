@@ -1,21 +1,6 @@
 <html>
 <%= form_for @safety_report do |f| %>
-<input name="safety_report[severity_value]" type="range" list="tickmarks"/>
-  <datalist id="tickmarks">
-    <option value="0" label="0">
-    <option value="10">
-    <option value="20">
-    <option value="30">
-    <option value="40">
-    <option value="50" label="50">
-    <option value="60">
-    <option value="70">
-    <option value="80">
-    <option value="90">
-    <option value="100" label="100">
-  </datalist>
-<br />
-<br />
+<p> Task </p>
 <input list="Tasks" name="task" >
 <datalist id="Tasks">
     <option value="Driving a truck">
@@ -24,9 +9,12 @@
 </datalist>
 <br />
 <br />
-<%= select_tag :hazard, options_for_select(["Electrical", "Fire", "Injury"]) %>
+<p> Hazard </p>
+<%= select_tag :hazard, options_for_select(['Fall', 'Fire', 'Electrocution']) %>
 <br />
-<%= select_tag :control, options_for_select(["Rubber Gloves", "Respirator", "Eye protection"]) %>
+<p> Control </p>
+<%= select_tag :control, options_for_select(['Wear a harness', 'Wear rubber gloves', 'Wear helmet']) %>
+<br />
 <br />
 <%= f.submit %>
 <% end %>
