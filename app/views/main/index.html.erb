@@ -1,0 +1,24 @@
+<h4> Welcome <%= @employee.name %> </h4>
+
+<div class="square">
+    <div class="content">
+        hazard example
+        <%= @hazard.name %>
+        <%= image_tag @hazard.icon_path, size: "50x50" %>
+    </div>
+</div>
+
+<div class="square">
+    <div class="content">
+      prevention_action example
+      <%= @prevention_action.name %>
+      <%= image_tag @prevention_action.icon_path, size: "50x50" %>
+    </div>
+</div>
+
+<div class="square">
+    <div class="content">
+      severity_value example
+      <%= @severity_value.value %>
+    </div>
+</div>
