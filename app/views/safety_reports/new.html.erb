@@ -1,15 +1,13 @@
 <html>
 <%= form_for @safety_report do |f| %>
-<input name="safety_report[severity_value]" type="range" min="0" max="100" value="0" onchange="showValue(this.value)" />
-<%= f.submit "Comment", :type => :image, :src => "icon.png" %>
+<input name="safety_report[severity_value]" type="range" min="0" max="100" value="0"/>
+
+<br />
+<br />
+
 <%= f.submit %>
 <% end %>
 
-<script type="text/javascript">
-function showValue(newValue)
-{
-document.getElementById("range").innerHTML=newValue;
-}
-</script>
+
 
 </html>
