@@ -1,5 +1,6 @@
 <html>
 <%= form_for @safety_report do |f| %>
+<p> Task </p>
 <input list="Tasks" name="task" >
 <datalist id="Tasks">
     <option value="Driving a truck">
@@ -8,9 +9,12 @@
 </datalist>
 <br />
 <br />
+<p> Hazard </p>
 <%= select_tag :hazard, options_for_select(['Fall', 'Fire', 'Electrocution']) %>
 <br />
+<p> Control </p>
 <%= select_tag :control, options_for_select(['Wear a harness', 'Wear rubber gloves', 'Wear helmet']) %>
+<br />
 <br />
 <%= f.submit %>
 <% end %>
