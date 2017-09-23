@@ -38,15 +38,20 @@
 }
 
 /*  following just for the demo */
-
+* {
+  box-sizing: border-box;
+}
 
 body {
     color: #DCEDFF;
     max-width: 780px;
     font-size:20px;
     font-family: 'Lato',verdana, sans-serif;
-    color: black;
     background: #103C52;
+}
+
+h1 {
+  margin: auto;
 }
 
 .numbers{
