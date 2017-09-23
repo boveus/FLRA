@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
 get '/', to: 'main#index', as: 'index'
 
+resources :safety_reports
 end
