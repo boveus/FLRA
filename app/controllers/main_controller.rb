@@ -1,10 +1,18 @@
 class MainController < ApplicationController
+  include ChartHandler
 
-  def index
-    @employee = Employee.first
-    @report = @employee.safety_reports.first
-    @hazard = @report.hazards.first
-    @severity_value = @hazard.severity_values.first
-    @prevention_action = @hazard.prevention_actions.first
+  def reminder
+  end
+
+  def dashboard
+
+  end
+
+  def reports_by_task
+    @reports_by_task = reports_by_task_chart
+  end
+
+  def time_of_day
+    @reports_by_time_of_day = time_of_day_chart
   end
 end

@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 20170923041649) do
   create_table "safety_reports", force: :cascade do |t|
     t.bigint "employee_id"
     t.string "task"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["employee_id"], name: "index_safety_reports_on_employee_id"
   end
 
