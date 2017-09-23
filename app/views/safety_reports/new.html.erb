@@ -3,17 +3,26 @@
 <p> Task </p>
 <input list="Tasks" name="task" >
 <datalist id="Tasks">
-    <option value="Driving a truck">
-    <option value="Lifting">
-    <option value="Jackhammer work">
+    <option value="Cleanup with a shovel">
+    <option value="Cleanup with a hose">
+    <option value="Collecting carbon samples">
+    <option value="Rebuilding a pump">
+    <option value="Rebuilding a PM on a pump">
+    <option value="Light changouts">
+    <option value="Conveyer work - changing out rollers">
+    <option value="Conveyer work - tracking of the conveyer">
+    <option value="Chemical agent disposal">
+    <option value="Hazardous waste disposal">
+    <option value="Transporting hazardous waste">
+    <option value="Transporting chemical agents">
 </datalist>
 <br />
 <br />
 <p> Hazard </p>
-<%= select_tag :hazard, options_for_select(['Fall', 'Fire', 'Electrocution']) %>
+<%= select_tag :hazard, options_for_select(['Fall', 'Fire', 'Electrocution', 'Chemical exposure', 'Trip hazard']) %>
 <br />
 <p> Control </p>
-<%= select_tag :control, options_for_select(['Wear a harness', 'Wear rubber gloves', 'Wear helmet']) %>
+<%= select_tag :control, options_for_select(['Wear a harness', 'Wear rubber gloves', 'Wear helmet', 'Chemical PPE', 'Wear steel-toed boots']) %>
 <br />
 <br />
 <%= f.submit %>
