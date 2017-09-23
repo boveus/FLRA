@@ -4,6 +4,8 @@ class CreateSafetyReports < ActiveRecord::Migration[5.1]
       t.integer :employee_id
       t.string :task
       t.references :employee
+
+      t.timestamps
     end
   end
 end

@@ -9,6 +9,10 @@ class MainController < ApplicationController
   end
 
   def reports_by_task
-    @reports_by_task = SafetyReport.by_task
+    @reports_by_task = reports_by_task_chart
+  end
+
+  def time_of_day
+    @reports_by_time_of_day = time_of_day_chart
   end
 end

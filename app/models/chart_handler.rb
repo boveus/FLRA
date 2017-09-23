@@ -5,6 +5,11 @@ module ChartHandler
     setup_chart(labels, data, "Reports by task")
   end
 
+  def time_of_day_chart
+    labels, data = SafetyReport.by_time_of_day
+    setup_chart(labels, data, "Reports by time of day")
+  end
+
   def setup_chart(data_label, chart_data, chart_label)
     {
     labels: data_label,

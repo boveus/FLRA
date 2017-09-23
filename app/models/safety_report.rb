@@ -4,7 +4,15 @@ class SafetyReport < ApplicationRecord
 
   def self.by_task
     format_for_chart(
-    group("task")
+    group(:task)
+    .order("count(task) DESC")
+    .count
+    )
+  end
+
+  def self.by_time_of_day
+    format_for_chart(
+    group("date_part('hour', created_at)")
     .count(:id)
     .sort)
   end
