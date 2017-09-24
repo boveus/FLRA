@@ -1,0 +1,66 @@
+h1 {
+  font-size: 32px;
+  margin: 20px auto;
+}
+section {
+  border-top: solid 1px #337CA0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "plane crane confined"
+    "electrical fall fire"
+    "ground bomb machine"
+    "failure energy trenches"
+}
+.hazard {
+  height: 20vh;
+}
+.plane {
+  grid-area: plane;
+  background: url(hazard-icons/01-aeroplane.svg) center / auto 15vh no-repeat;
+}
+.crane {
+  grid-area: crane;
+  background: url(hazard-icons/02-crane.svg) center / auto 15vh no-repeat;
+}
+.confined {
+  grid-area: confined;
+    background: url(hazard-icons/03-confined.svg) center / auto 15vh no-repeat;
+}
+.electrical {
+  grid-area: electrical;
+    background: url(hazard-icons/04-electrical.svg) center / auto 15vh no-repeat;
+}
+.fall {
+  grid-area: fall;
+    background: url(hazard-icons/05-fall.svg) center / auto 15vh no-repeat;
+}
+.fire {
+  grid-area: fire;
+    background: url(hazard-icons/06-fire.svg) center / auto 15vh no-repeat;
+}
+.ground {
+  grid-area: ground;
+    background: url(hazard-icons/07-ground.svg) center / auto 15vh no-repeat;
+}
+.bomb {
+  grid-area: bomb;
+    background: url(hazard-icons/08-bomb.svg) center / auto 15vh no-repeat;
+}
+.machine {
+  grid-area: machine;
+    background: url(hazard-icons/10-machine.svg) center / auto 15vh no-repeat;
+}
+.failure {
+  grid-area: failure;
+  background: url(hazard-icons/12-failure.svg) center / auto 15vh no-repeat;
+}
+.energy {
+  grid-area: energy;
+    background: url(hazard-icons/14-energy.svg) center / auto 15vh no-repeat;
+}
+.trenches {
+  grid-area: trenches;
+    background: url(hazard-icons/15-trenches.svg) center / auto 15vh no-repeat;
+}
